@@ -58,7 +58,6 @@ class_name Arena
 var gold_list: Array[Coins]
 
 
-<<<<<<< HEAD
 
 ## 商店老板场景（Shopkeeper）预加载。由 spawn_shopkeeper 实例化。
 const SHOPKEEPER_SCENE = preload("res://scenes/unit/shopkeeper/shopkeeper.tscn")
@@ -71,8 +70,6 @@ var last_shopkeeper_pos := Vector2.ZERO
 
 
 
-=======
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516
 ## 函数说明：场景就绪时连接全局信号到本地回调。
 ## 被谁调用：由 Godot 引擎在节点进入场景树时自动调用。
 ## 调用了：Global 信号的 connect()。
@@ -139,10 +136,7 @@ func start_new_wave() -> void:
 	spawner.wave_index += 1
 	# 让刷怪器按新波数启动本波刷怪。
 	spawner.start_wave()
-<<<<<<< HEAD
 	spawn_shopkeeper()
-=======
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516
 
 
 ## 函数说明：清理战场：让所有金币飞向金币袋，并清除剩余敌人。
@@ -227,7 +221,6 @@ func _on_upgrade_selected() -> void:
 	# 隐藏升级面板。
 	upgrade_panel.hide()
 	# 用当前波数加载商店商品。
-<<<<<<< HEAD
 	#shop_panel.load_shop(spawner.wave_index)
 	# 显示商店面板。
 	#shop_panel.show()
@@ -237,11 +230,6 @@ func _on_upgrade_selected() -> void:
 
 
 
-=======
-	shop_panel.load_shop(spawner.wave_index)
-	# 显示商店面板。
-	shop_panel.show()
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516
 
 
 ## 函数说明：Spawner.on_wave_completed 信号回调，波末结算流程。
@@ -268,13 +256,9 @@ func _on_shop_panel_on_shop_next_wave() -> void:
 	# 隐藏商店面板。
 	shop_panel.hide()
 	# 开始新一波。
-<<<<<<< HEAD
 	#start_new_wave()
 	# ★ 只恢复战斗，不再 start_new_wave（波数推进已移到 _on_upgrade_selected）。
 	Global.game_paused = false
-=======
-	start_new_wave()
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516
 
 
 ## 函数说明：Global.on_enemy_died 信号回调，敌人死亡 → 掉落金币。
@@ -305,7 +289,6 @@ func _on_selection_panel_on_selection_completed() -> void:
 	spawner.start_wave()
 	# 解除暂停，正式开始游戏。
 	Global.game_paused = false
-<<<<<<< HEAD
 	# ★ 第一波也刷一个商店老板。
 	spawn_shopkeeper()
 	
@@ -363,5 +346,3 @@ func open_shop() -> void:
 ## 调用了：open_shop()。
 func _on_shopkeeper_interact() -> void:
 	open_shop()
-=======
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516

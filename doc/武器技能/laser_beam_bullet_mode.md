@@ -733,4 +733,4 @@ laser 项目的 freeze 命中会 `speed -= 50`（减速）。plant_def 敌人速
 | `scenes/weapons/range/weapon_laser.tscn` | 修改（WeaponBehavior 脚本换成 laser_behavior.gd） |
 | `resources/items/weapons/range/laser/stats_laser_1.tres` | 修改（可选，调冷却/射程/后坐力） |
 
-*文档生成时间：2026-10-20* 
+*文档生成时间：2026-10-20*

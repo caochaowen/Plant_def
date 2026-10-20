@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 res://scenes/arena/
 res://tilleset/
 res://scenes/ui/card_deck/
 res://scenes/unit/Shopkeeper/
 res://scenes/unit/
 res://resources/units/npcs/
-=======
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516
 res://scenes/ui/character_status/
 res://styles/
 res://scenes/unit/players/skills/

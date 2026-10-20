@@ -51,11 +51,7 @@ enum UnitType {
 ## 幸运值：影响高稀有度掉落/商店概率（Global.calculate_tier_probability）。
 @export var luck := 1.0
 
-<<<<<<< HEAD
 ## 闪避概率（0.0~1.0）：受击时完全抵挡伤害的概率。
-=======
-## 格挡概率（0.0~1.0）：受击时完全抵挡伤害的概率。
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516
 @export var block_chance := 0.0
 
 ## 金币掉落量：敌人死亡时掉落的金币数（Arena.spawn_coins）。
@@ -75,9 +71,6 @@ enum UnitType {
 
 ## 体力每秒回复量。
 @export var stamina_regen := 10.0
-<<<<<<< HEAD
 
 #抗性
 @export var Resistance := 0.0
-=======
->>>>>>> 737d3c7866ace77ccd9525ecf998dca41fae4516

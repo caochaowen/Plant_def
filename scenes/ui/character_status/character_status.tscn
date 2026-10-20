@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://cr384yyl0e5bm"]
+
+[ext_resource type="Texture2D" uid="uid://dq63ocnu3lset" path="res://assets/sprites/Players/Player_3}.png" id="1_pma4p"]
+[ext_resource type="Script" uid="uid://c0mk8266mr7ra" path="res://scenes/ui/character_status/character_status.gd" id="1_r8gld"]
+[ext_resource type="StyleBox" uid="uid://cqv20w0tiury4" path="res://styles/blood_bar.tres" id="2_hv77w"]
+[ext_resource type="StyleBox" uid="uid://chxsktowv55wp" path="res://styles/epic_style.tres" id="3_eowjs"]
+[ext_resource type="StyleBox" uid="uid://cpeijlvk0ul44" path="res://styles/skills_style.tres" id="4_eowjs"]
+[ext_resource type="Texture2D" uid="uid://dac1qxk0rktmg" path="res://assets/sprites/Upgrades/11.png" id="5_5k60b"]
+[ext_resource type="Texture2D" uid="uid://dn68qq5evmvwa" path="res://assets/sprites/Upgrades/12.png" id="6_r8gld"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3bcu"]
+bg_color = Color(0.29586652, 0.29586652, 0.29586637, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_hv77w"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_eowjs"]
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_ak7l1"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_5k60b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gcgr4"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_r8gld"]
+
+[node name="CharacterStatus" type="Panel" unique_id=970586049]
+custom_minimum_size = Vector2(330, 208)
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 112.0
+offset_right = 340.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b3bcu")
+script = ExtResource("1_r8gld")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1841179441]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=808180907]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Top" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2109007806]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Face" type="TextureRect" parent="MarginContainer/VBoxContainer/Top" unique_id=656785399]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_pma4p")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bars" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Top" unique_id=907860389]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HPRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Top/Bars" unique_id=1969235674]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HPValue" type="Label" parent="MarginContainer/VBoxContainer/Top/Bars/HPRow" unique_id=950654943]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "1/100"
+label_settings = SubResource("LabelSettings_hv77w")
+horizontal_alignment = 2
+
+[node name="HPBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/Top/Bars/HPRow" unique_id=799263593]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = ExtResource("2_hv77w")
+max_value = 1.0
+show_percentage = false
+
+[node name="StaminaRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Top/Bars" unique_id=15826960]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="StaminaValue" type="Label" parent="MarginContainer/VBoxContainer/Top/Bars/StaminaRow" unique_id=1201355261]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "1/100"
+label_settings = SubResource("LabelSettings_eowjs")
+horizontal_alignment = 2
+
+[node name="StaminaBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/Top/Bars/StaminaRow" unique_id=1839451186]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = ExtResource("3_eowjs")
+max_value = 1.0
+show_percentage = false
+
+[node name="Skills" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1435597272]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Skill1" type="Panel" parent="MarginContainer/VBoxContainer/Skills" unique_id=687449361]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_eowjs")
+
+[node name="Skill1Icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Skills/Skill1" unique_id=91003913]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_5k60b")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Skill1Overlay" type="ColorRect" parent="MarginContainer/VBoxContainer/Skills/Skill1" unique_id=59073723]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 80)
+color = Color(0, 0, 0, 0.6)
+
+[node name="Skill1Cooldown" type="Label" parent="MarginContainer/VBoxContainer/Skills/Skill1" unique_id=190956815]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "12"
+label_settings = SubResource("LabelSettings_ak7l1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyHint1" type="Label" parent="MarginContainer/VBoxContainer/Skills/Skill1" unique_id=552052708]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -26.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "q"
+label_settings = SubResource("LabelSettings_5k60b")
+
+[node name="Skill2" type="Panel" parent="MarginContainer/VBoxContainer/Skills" unique_id=778818582]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_eowjs")
+
+[node name="Skill2Icon" type="TextureRect" parent="MarginContainer/VBoxContainer/Skills/Skill2" unique_id=234535458]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_r8gld")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Skill2Overlay" type="ColorRect" parent="MarginContainer/VBoxContainer/Skills/Skill2" unique_id=1091032353]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 80)
+color = Color(0, 0, 0, 0.6)
+
+[node name="Skill2Cooldown" type="Label" parent="MarginContainer/VBoxContainer/Skills/Skill2" unique_id=88839927]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_gcgr4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyHint2" type="Label" parent="MarginContainer/VBoxContainer/Skills/Skill2" unique_id=1805580825]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -26.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "e"
+label_settings = SubResource("LabelSettings_r8gld")

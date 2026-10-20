@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ckdyq60oijeoc"]
+
+[ext_resource type="Script" uid="uid://d1qy1ej3vo3j8" path="res://scenes/ui/card_deck/card_deck.gd" id="1_xpjhu"]
+[ext_resource type="Script" uid="uid://dcoqk77vjfvh5" path="res://scenes/ui/card_deck/deck_card.gd" id="2_u0yyq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5dgo"]
+bg_color = Color(0.3574912, 0.3574912, 0.3574912, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.09320182, 0.09320182, 0.09320182, 0.5)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="CardDeck" type="HBoxContainer" unique_id=1564873221]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -332.0
+offset_top = -176.0
+offset_right = 332.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+script = ExtResource("1_xpjhu")
+
+[node name="DeckCard1" type="Panel" parent="." unique_id=1612621034]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5dgo")
+script = ExtResource("2_u0yyq")
+
+[node name="DeckCard2" type="Panel" parent="." unique_id=73105332]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5dgo")
+script = ExtResource("2_u0yyq")
+
+[node name="DeckCard3" type="Panel" parent="." unique_id=1106482180]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5dgo")
+script = ExtResource("2_u0yyq")
+
+[node name="DeckCard4" type="Panel" parent="." unique_id=1744949759]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5dgo")
+script = ExtResource("2_u0yyq")
+
+[node name="DeckCard5" type="Panel" parent="." unique_id=796527879]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5dgo")
+script = ExtResource("2_u0yyq")

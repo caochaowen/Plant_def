@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bnd0la5oxocyw"]
+
+[ext_resource type="Script" uid="uid://tw0lj4mqaovn" path="res://freeze_laser.gd" id="1_ccdgn"]
+
+[sub_resource type="Animation" id="Animation_n6was"]
+resource_name = "fade"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Line2D:width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccdgn"]
+_data = {
+&"fade": SubResource("Animation_n6was")
+}
+
+[node name="FreezeLaser" type="RayCast2D" unique_id=847696409]
+modulate = Color(1.1638972, 1.1638972, 1.1638972, 1)
+target_position = Vector2(20, 0)
+collision_mask = 5
+script = ExtResource("1_ccdgn")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=51921157]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 8.0
+default_color = Color(0.8784314, 1, 1, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1047448273]
+libraries/ = SubResource("AnimationLibrary_ccdgn")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

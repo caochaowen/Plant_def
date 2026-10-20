@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dkjqu0ys4k662"]
+
+[ext_resource type="PackedScene" uid="uid://bwo04frw2wqoy" path="res://scenes/unit/players/player_well_rounded.tscn" id="1_5054k"]
+[ext_resource type="Resource" uid="uid://cn0unmmub6kf" path="res://resources/units/players/stats_player_crazy.tres" id="2_e1phh"]
+[ext_resource type="Texture2D" uid="uid://dq63ocnu3lset" path="res://assets/sprites/Players/Player_3}.png" id="2_ii53f"]
+[ext_resource type="Script" uid="uid://bc6eu5bjkfdh5" path="res://scenes/unit/players/skills/crazy_skills.gd" id="4_e1phh"]
+[ext_resource type="Texture2D" uid="uid://dac1qxk0rktmg" path="res://assets/sprites/Upgrades/11.png" id="5_fvmwc"]
+[ext_resource type="Texture2D" uid="uid://dn68qq5evmvwa" path="res://assets/sprites/Upgrades/12.png" id="6_djiej"]
+
+[node name="PlayerCrazy" unique_id=713859460 instance=ExtResource("1_5054k")]
+stats = ExtResource("2_e1phh")
+
+[node name="Sprite" parent="Visuals" index="2"]
+texture = ExtResource("2_ii53f")
+
+[node name="Skills" parent="." index="12" unique_id=718938784]
+script = ExtResource("4_e1phh")
+skill_1_icon = ExtResource("5_fvmwc")
+skill_2_icon = ExtResource("6_djiej")

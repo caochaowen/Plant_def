@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b6emn4n6ogmg8"]
+
+[ext_resource type="PackedScene" uid="uid://bwo04frw2wqoy" path="res://scenes/unit/players/player_well_rounded.tscn" id="1_t1ilm"]
+[ext_resource type="Resource" uid="uid://bohade16ieo0f" path="res://resources/units/players/stats_player_brawler.tres" id="2_k813p"]
+[ext_resource type="Texture2D" uid="uid://dpxw8tsbgrfse" path="res://assets/sprites/Players/Player_2.png" id="2_tvi6w"]
+[ext_resource type="Script" uid="uid://p164ggn8xjes" path="res://scenes/unit/players/skills/brawler_skills.gd" id="4_k813p"]
+[ext_resource type="Texture2D" uid="uid://dac1qxk0rktmg" path="res://assets/sprites/Upgrades/11.png" id="5_fd4fd"]
+[ext_resource type="Texture2D" uid="uid://dn68qq5evmvwa" path="res://assets/sprites/Upgrades/12.png" id="6_y6ypj"]
+
+[node name="PlayerBrawler" unique_id=1393769188 instance=ExtResource("1_t1ilm")]
+stats = ExtResource("2_k813p")
+
+[node name="Sprite" parent="Visuals" index="2"]
+texture = ExtResource("2_tvi6w")
+
+[node name="Skills" parent="." index="12" unique_id=718938784]
+script = ExtResource("4_k813p")
+skill_1_icon = ExtResource("5_fd4fd")
+skill_2_icon = ExtResource("6_y6ypj")

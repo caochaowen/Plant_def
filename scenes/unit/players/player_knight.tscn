@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cecw4o0onlxq8"]
+
+[ext_resource type="PackedScene" uid="uid://bwo04frw2wqoy" path="res://scenes/unit/players/player_well_rounded.tscn" id="1_tsqjv"]
+[ext_resource type="Resource" uid="uid://rn54posoohkv" path="res://resources/units/players/stats_player_knight.tres" id="2_rn052"]
+[ext_resource type="Texture2D" uid="uid://bt0lww88864ws" path="res://assets/sprites/Players/Player_5.png" id="2_t2hln"]
+[ext_resource type="Script" uid="uid://cwu8k2bj21p45" path="res://scenes/unit/players/skills/knight_skills.gd" id="4_rn052"]
+[ext_resource type="Texture2D" uid="uid://dac1qxk0rktmg" path="res://assets/sprites/Upgrades/11.png" id="5_3rxcb"]
+[ext_resource type="Texture2D" uid="uid://dn68qq5evmvwa" path="res://assets/sprites/Upgrades/12.png" id="6_ixyrg"]
+
+[node name="PlayerKnight" unique_id=1416379470 instance=ExtResource("1_tsqjv")]
+stats = ExtResource("2_rn052")
+
+[node name="Sprite" parent="Visuals" index="2"]
+texture = ExtResource("2_t2hln")
+
+[node name="Skills" parent="." index="12" unique_id=718938784]
+script = ExtResource("4_rn052")
+skill_1_icon = ExtResource("5_3rxcb")
+skill_2_icon = ExtResource("6_ixyrg")

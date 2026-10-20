@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bg433ddkvyf0v"]
+
+[ext_resource type="PackedScene" uid="uid://bfis58i4px2f4" path="res://scenes/unit/unit.tscn" id="1_wlmw4"]
+[ext_resource type="Script" uid="uid://c0173uahvhugd" path="res://scenes/unit/Shopkeeper/shopkeeper.gd" id="2_4ot7e"]
+[ext_resource type="Texture2D" uid="uid://dpxw8tsbgrfse" path="res://assets/sprites/Players/Player_2.png" id="2_d58nk"]
+[ext_resource type="Resource" uid="uid://s7ocy1f6gjkn" path="res://resources/units/npcs/stats_shopkeeper.tres" id="3_4ot7e"]
+
+[node name="Shopkeeper" unique_id=1747079577 instance=ExtResource("1_wlmw4")]
+script = ExtResource("2_4ot7e")
+interact_distance = 120.0
+stats = ExtResource("3_4ot7e")
+
+[node name="Sprite" parent="Visuals" index="1"]
+texture = ExtResource("2_d58nk")
+
+[node name="HurtboxComponent" parent="." index="3"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="InteractLabel" type="Label" parent="." index="7" unique_id=370421436]
+offset_right = 40.0
+offset_bottom = 20.0

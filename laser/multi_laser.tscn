@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://le7p8a5axsno"]
+
+[ext_resource type="Script" uid="uid://rnamxyuldu30" path="res://multi_laser.gd" id="1_lder1"]
+
+[sub_resource type="Animation" id="Animation_8rvdx"]
+resource_name = "fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Line2D:width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lder1"]
+_data = {
+&"fade": SubResource("Animation_8rvdx")
+}
+
+[node name="MultiLaser" type="RayCast2D" unique_id=1872922587]
+modulate = Color(1.1638972, 1.1638972, 1.1638972, 1)
+target_position = Vector2(50, 0)
+collision_mask = 5
+script = ExtResource("1_lder1")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1480519265]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 8.0
+default_color = Color(1, 0.92156863, 0.23137255, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1528367181]
+libraries/ = SubResource("AnimationLibrary_lder1")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

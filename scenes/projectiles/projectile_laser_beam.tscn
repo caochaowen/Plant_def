@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bu22dkis11b5r"]
+
+[ext_resource type="Script" uid="uid://bnw8p7xe4nyvm" path="res://scenes/projectiles/laser_beam.gd" id="1_4a1ar"]
+
+[sub_resource type="Gradient" id="Gradient_1l571"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4a1ar"]
+gradient = SubResource("Gradient_1l571")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sbyu0"]
+particle_flag_disable_z = true
+initial_velocity_min = 60.0
+initial_velocity_max = 160.0
+gravity = Vector3(0, 98, 0)
+scale_min = 6.0
+scale_max = 6.0
+color_ramp = SubResource("GradientTexture1D_4a1ar")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx8kh"]
+
+[node name="ProjectileLaserBeam" type="Node2D" unique_id=1281220900]
+z_index = 10
+script = ExtResource("1_4a1ar")
+mode = 2
+beam_color = Color(0.06439, 0.71718556, 0.6107906, 1)
+
+[node name="Ray" type="RayCast2D" parent="." unique_id=360517441]
+target_position = Vector2(0, 0)
+collision_mask = 8
+collide_with_areas = true
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1823980149]
+points = PackedVector2Array(0, 0, 0, 0)
+default_color = Color(0.47680712, 0.673002, 0.47272146, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=2018649416]
+visible = false
+emitting = false
+amount = 24
+trail_lifetime = 0.4
+process_material = SubResource("ParticleProcessMaterial_sbyu0")
+
+[node name="ShapeCast" type="ShapeCast2D" parent="." unique_id=470002443]
+enabled = false
+shape = SubResource("RectangleShape2D_kx8kh")
+target_position = Vector2(0, 0)
+collision_mask = 8
+collide_with_areas = true
+
+[node name="XuliLine" type="Line2D" parent="." unique_id=880124417]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 32.0
+default_color = Color(1, 1, 1, 0.4)
+
+[node name="BoomLine" type="Line2D" parent="." unique_id=1157016049]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 40.0

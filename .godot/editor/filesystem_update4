@@ -1,6 +1,0 @@
-res://resources/waves/data/wave_1_to_5.tres
-res://tilleset/map_normal.tres
-res://scenes/arena/map_area.tscn
-res://scenes/arena/arena.tscn
-res://resources/units/unit_stats.gd
-res://scenes/arena/arena.gd

@@ -36,7 +36,7 @@ func _set_data(value: ItemUpgrade) -> void:
 	# 填充图标、名称、描述。
 	item_icon.texture = item_data.item_icon
 	item_name.text = item_data.item_name
-	item_description.text = item_data.description
+	item_description.text = item_data.get_description()
 
 	# 用品质取样式覆盖 panel 样式，让升级卡片边框显示品质颜色。
 	var style := Global.get_tier_style(item_data.item_tier)

@@ -1,0 +1,11 @@
+res://scenes/ui/upgrade_card/upgrade_card.tscn
+res://resources/waves/data/wave_1_to_5.tres
+res://tilleset/map_normal.tres
+res://resources/items/upgrades/item_upgrade.gd
+res://scenes/ui/upgrade_panel/upgrade_panel.tscn
+res://resources/items/upgrades/data/block/upgrade_block_1.tres
+res://resources/items/upgrades/data/block/upgrade_block_2.tres
+res://resources/items/upgrades/data/block/upgrade_block_6.tres
+res://resources/items/upgrades/data/damage/upgrade_damage_1.tres
+res://resources/items/upgrades/data/damage/upgrade_damage_2.tres
+res://resources/items/upgrades/data/speed/upgrade_speed_20.tres
